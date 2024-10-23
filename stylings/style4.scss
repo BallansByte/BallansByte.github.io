@@ -176,26 +176,32 @@ button.clear:hover {
     background-color: darken($secondary-color, 10%);
 }
 /*******************************************************************************************************************************/
+
+/*******************************************************************************************************************************/
 $primary-color: #4CAF50;
 $background-color: #f4f4f4;
 $text-color: #333;
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: $background-color;
-    margin: 0;
-    padding: 0;
+
+.calculator-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the forms horizontally */
+    align-items: flex-start; /* Align items to the top */
+    margin: 50px auto; /* Center container vertically and horizontally */
+    max-width: 1200px; /* Set maximum width for the container */
+    padding: 20px; /* Add padding around the container */
+    gap: 20px; /* Add space between the forms */
 }
 
-.calculator {
-    max-width: 400px;
-    margin: 50px auto;
+.calculator, .liters-input {
+    flex: 1; /* Allow the forms to grow equally */
+    max-width: 400px; /* Set maximum width for each form */
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    h1 {
+    h1, h2 {
         text-align: center;
         color: $primary-color;
     }
@@ -235,7 +241,6 @@ body {
         color: $primary-color;
     }
 }
-
 /*******************************************************************************************************************************/
 
 /* Footer styles */

@@ -54,3 +54,20 @@ document.getElementById('pricing-form').addEventListener('submit', function(even
 
 
 /****************************************************************************************************************************** */
+// Liters input form
+document.getElementById('liters-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const litersInput = parseFloat(document.getElementById('liters-input').value);
+
+    if (isNaN(litersInput)) {
+        document.getElementById('liters-result').textContent = 'Please enter valid liters.';
+        return;
+    }
+
+    // Calculate the number of trucks needed
+    const truckCapacity = 54000; // capacity in liters
+    const numberOfTrucks = (litersInput / truckCapacity).toFixed(2); // Calculate and format to two decimal places
+
+    document.getElementById('liters-result').textContent = `You will need approximately ${numberOfTrucks} truck(s) for ${litersInput} liters.`;
+});
