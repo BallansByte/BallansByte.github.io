@@ -31,3 +31,20 @@ function clearPmsFields() {
     document.getElementById('pmsForm').reset();
     document.getElementById('pmsVolumeLiters').value = '';
 }
+/**************************************************************************************************************************** */
+document.getElementById('pricing-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const liters = parseFloat(document.getElementById('liters').value);
+    const price = parseFloat(document.getElementById('price').value);
+    const trucks = parseFloat(document.getElementById('trucks').value);
+
+    if (isNaN(liters) || isNaN(price) || isNaN(trucks)) {
+        document.getElementById('result').textContent = 'Please enter valid numbers.';
+        return;
+    }
+
+    const totalCost = liters * price * trucks;
+    document.getElementById('result').textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+});
+/****************************************************************************************************************************** */

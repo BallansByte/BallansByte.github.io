@@ -85,7 +85,7 @@ body {
 
 /* Hero section */
 .hero {
-    background-image: url('./images/hero-background.jpg'); /* Replace with your image */
+    background-image: url('/images/hero-background.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     color: white;
@@ -126,7 +126,7 @@ body {
 /* Services section */
 .services {
     padding: 50px 0;
-    background-image: url('/colton-sturgeon-f7ADPPOG_EQ-unsplash.jpg');
+    background-image: url('/images/colton-sturgeon-f7ADPPOG_EQ-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-color: #ccc;
