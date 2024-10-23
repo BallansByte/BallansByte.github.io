@@ -181,10 +181,10 @@ $background-color: #f4f4f4;
 $text-color: #333;
 
 .calculator-container {
-    background: url('/images/petroleum-5086759_1280.png') no-repeat center center fixed; /* Add your background image */
+    background: url('/images/petroleum-5086759_1280.png') no-repeat center center fixed;
     background-size: cover;
-    display: flex ; /* Use flexbox for layout */
-    justify-content: center; /* Center the forms horizontally */
+    display: flex ; 
+    justify-content: center; 
     align-items: flex-start;
     margin: 50px auto;
     max-width: 1200px; 
@@ -195,8 +195,8 @@ $text-color: #333;
 }
 
 .calculator, .liters-input {
-    flex: 1; /* Allow the forms to grow equally */
-    max-width: 400px; /* Set maximum width for each form */
+    flex: 1;
+    max-width: 400px;
     padding: 20px;
     background: white;
     border-radius: 8px;
