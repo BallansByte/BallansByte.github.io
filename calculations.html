@@ -60,29 +60,31 @@
         </div>
     </section>
 <!------------------------------------------------------------------------------------------------------------------>
-<div class="calculator">
-    <h1>Petroleum Pricing Calculator</h1>
-    <form id="pricing-form">
-        <label for="liters">Number of Liters:</label>
-        <input type="number" id="liters" required step="any">
+<div class="calculator-container">
+    <div class="calculator">
+        <h2>Pricing Calculator</h2>
+        <form id="pricing-form">
+            <label for="liters">Enter Liters:</label>
+            <input type="number" id="liters" required step="any">
 
-        <label for="price">Price per Liter:</label>
-        <input type="number" id="price" required step="any">
-        <button type="submit">Calculate</button>
-    </form>
-    <div id="result" class="result"></div>
-</div>
-<!------------------------------------------------------------------------------------------------------------------>
-<div class="liters-input">
-    <h2>Liters Input</h2>
-    <form id="liters-form">
-        <label for="liters-input">Enter Liters:</label>
-        <input type="number" id="liters-input" required step="any">
+            <label for="price">Enter Price per Liter:</label>
+            <input type="number" id="price" required step="any">
 
-        <button type="submit">Submit</button>
-    </form>
-    <div id="liters-result" class="result"></div>
-</div>
+            <button type="submit">Calculate Price</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <div class="liters-input">
+        <h2>Liters Input</h2>
+        <form id="liters-form">
+            <label for="liters-input">Enter Liters:</label>
+            <input type="number" id="liters-input" required step="any">
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="liters-result" class="result"></div>
+    </div>
 </div>
 <!------------------------------------------------------------------------------------------------------------------>
     <!-- Footer -->

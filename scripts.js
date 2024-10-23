@@ -32,24 +32,35 @@ function clearPmsFields() {
     document.getElementById('pmsVolumeLiters').value = '';
 }
 /**************************************************************************************************************************** */
-document.getElementById('pricing-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Retrieve user input and convert to float
+document.getElementById('pricing-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    // Get input values
     const liters = parseFloat(document.getElementById('liters').value);
-    const price = parseFloat(document.getElementById('price').value);
+    const pricePerLiter = parseFloat(document.getElementById('price').value);
+    
+    // Calculate total price
+    const totalPrice = liters * pricePerLiter;
 
-    // Check if inputs are valid numbers
-    if (isNaN(liters) || isNaN(price)) {
-        document.getElementById('result').textContent = 'Please enter valid numbers.';
-        return;
-    }
+    // Format total price with commas and cedi sign
+    const formattedTotalPrice = '₵' + totalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-    // Calculate total cost
-    const totalCost = liters * price;
+    // Display the result
+    document.getElementById('result').textContent = `Total Price: ${formattedTotalPrice}`;
+});
 
-    // Format total cost with two decimal places and commas
-    document.getElementById('result').textContent = `Total Cost: $${totalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+// For the liters input form
+document.getElementById('liters-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get liters input value
+    const litersInput = parseFloat(document.getElementById('liters-input').value);
+
+    // Calculate number of trucks
+    const trucks = (litersInput / 54000).toFixed(2);
+
+    // Display the result
+    document.getElementById('liters-result').textContent = `Number of Trucks: ${trucks}`;
 });
 
 

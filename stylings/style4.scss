@@ -176,21 +176,22 @@ button.clear:hover {
     background-color: darken($secondary-color, 10%);
 }
 /*******************************************************************************************************************************/
-
-/*******************************************************************************************************************************/
 $primary-color: #4CAF50;
 $background-color: #f4f4f4;
 $text-color: #333;
 
-
 .calculator-container {
-    display: flex; /* Use flexbox for layout */
+    background: url('/images/petroleum-5086759_1280.png') no-repeat center center fixed; /* Add your background image */
+    background-size: cover;
+    display: flex ; /* Use flexbox for layout */
     justify-content: center; /* Center the forms horizontally */
     align-items: flex-start; /* Align items to the top */
     margin: 50px auto; /* Center container vertically and horizontally */
     max-width: 1200px; /* Set maximum width for the container */
     padding: 20px; /* Add padding around the container */
-    gap: 20px; /* Add space between the forms */
+}
+.liters-input {
+    height: 355px;
 }
 
 .calculator, .liters-input {
@@ -200,6 +201,7 @@ $text-color: #333;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Add margin to separate the forms horizontally */
 
     h1, h2 {
         text-align: center;
