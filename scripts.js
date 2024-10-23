@@ -9,6 +9,7 @@ function calculateDieselVolume() {
         alert('Please enter a valid mass in metric tonnes.');
     }
 }
+ 
 
 function clearDieselFields() {
     document.getElementById('dieselForm').reset();
