@@ -185,9 +185,9 @@ $text-color: #333;
     background-size: cover;
     display: flex ; /* Use flexbox for layout */
     justify-content: center; /* Center the forms horizontally */
-    align-items: flex-start; /* Align items to the top */
-    margin: 50px auto; /* Center container vertically and horizontally */
-    max-width: 1200px; /* Set maximum width for the container */
+    align-items: flex-start;
+    margin: 50px auto;
+    max-width: 1200px; 
     padding: 20px; 
 }
 .liters-input {
