@@ -57,7 +57,7 @@ body {
 }
 
 .nav-menu li a:hover {
-  color: yellow; /* Change color on hover */
+  color: yellow;
 }
 
 /* Responsive design */
