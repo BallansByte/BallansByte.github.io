@@ -35,16 +35,22 @@ function clearPmsFields() {
 document.getElementById('pricing-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    // Retrieve user input and convert to float
     const liters = parseFloat(document.getElementById('liters').value);
     const price = parseFloat(document.getElementById('price').value);
-    const trucks = parseFloat(document.getElementById('trucks').value);
 
-    if (isNaN(liters) || isNaN(price) || isNaN(trucks)) {
+    // Check if inputs are valid numbers
+    if (isNaN(liters) || isNaN(price)) {
         document.getElementById('result').textContent = 'Please enter valid numbers.';
         return;
     }
 
-    const totalCost = liters * price * trucks;
-    document.getElementById('result').textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+    // Calculate total cost
+    const totalCost = liters * price;
+
+    // Format total cost with two decimal places and commas
+    document.getElementById('result').textContent = `Total Cost: $${totalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
 });
+
+
 /****************************************************************************************************************************** */

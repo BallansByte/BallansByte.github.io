@@ -64,14 +64,10 @@
     <h1>Petroleum Pricing Calculator</h1>
     <form id="pricing-form">
         <label for="liters">Number of Liters:</label>
-        <input type="number" id="liters" required>
+        <input type="number" id="liters" required step="any">
 
         <label for="price">Price per Liter:</label>
-        <input type="number" id="price" required>
-
-        <label for="trucks">Number of Trucks:</label>
-        <input type="number" id="trucks" required>
-
+        <input type="number" id="price" required step="any">
         <button type="submit">Calculate</button>
     </form>
     <div id="result" class="result"></div>
